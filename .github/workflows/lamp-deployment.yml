@@ -11,11 +11,9 @@ jobs:
     steps:
     - name: Checkout sources
       uses: actions/checkout@v4.2.1
-      
+
     - name: run-ansible-lint
       uses: ansible/ansible-lint@v24.9.2
       with:
-        targets: |
-          ansible/inventory.yml
-          ansible/playbook.yml
-            
+        working_directory: |
+          ansible
