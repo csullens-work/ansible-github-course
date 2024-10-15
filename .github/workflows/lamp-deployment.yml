@@ -17,3 +17,5 @@ jobs:
       with:
         working_directory: |
           ansible
+        args: "-c ansible/.ansible-lint"
+
