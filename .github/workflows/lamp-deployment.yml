@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout sources
-      uses: actions/checkout@v4.2.1
+      - name: Checkout sources
+        uses: actions/checkout@v4.2.1
 
-    - name: run-ansible-lint
-      uses: ansible/ansible-lint@v24.9.2
-      with:
-        working_directory: |
-          ansible
-        args: "-c .ansible-lint"
+      - name: run-ansible-lint
+        uses: ansible/ansible-lint@v24.9.2
+        with:
+          working_directory: |
+            ansible
+          args: "-c .ansible-lint"
